@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+        <link rel="stylesheet" href="css/styles.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <title>
+        CarGaraage | Home
+    </title>
+    <body>
+        <nav class="navbar navbar-fixed-top bg-nav">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img class="navbar-brand-logo" src="../CarGaraageLogo.png"/>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a></li>
+                            <li><a class="nav-link" href="#">News <span class="sr-only">(current)</span></a></li>
+                            <li><a class="nav-link" href="#">Videos & Reviews <span class="sr-only">(current)</span></a></li>
+                            <li>
+                                <a class="nav-link" href="#" data-toggle="tooltip" data-placement="bottom" title="Login">
+                                    <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="#" data-toggle="tooltip" data-placement="bottom" title="View Account Details" >
+                                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                        </ul>
+                      </div><!-- /.navbar-collapse -->
+            </div>
+        </nav>
+        <nav class="navbar navbar-fixed-top small bg-nav shadow">
+                <div class="container-fluid">
+                </div>
+        </nav>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            
+                <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="images/Slide1.png" alt="Audi">
+                    <div class="carousel-caption">
+                        <h3>...</h3>
+                        <p>...</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/Slide2.jpg" alt="Slide2" >
+                    <div class="carousel-caption">
+                        <h3>...</h3>
+                        <p>...</p>
+                    </div>
+                </div>
+                
+                  <div class="item">
+                    <img src="images/Slide3.jpg" alt="Slide3" >
+                    <div class="carousel-caption">
+                      <h3>...</h3>
+                      <p>...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Carousel End-->
+        <div class="well well-lg">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p class="panel-title">What are you looking for?</p>
+                </div>
+                <div class="panel-body">
+                    <fieldset>
+                        <div class="toggle">
+                            <input type="radio" name="searchBy" value="make" id="Make" checked="checked" />
+                            <label for="Make">Search by Make</label>
+                            <input type="radio" name="searchBy" value="style" id="Style" />
+                            <label for="Style">Search by Body Style</label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="panel-body">
+                    <select class="form-control" id="make-select">
+                        <option>All Makes</option>
+                        <option>Audi</option>
+                        <option>Bentley</option>
+                        <option>Chevrolet</option>
+                        <option>Dodge</option>
+                        <option>Eagle</option>
+                        <option>Ferrari</option>
+                        <option>GMC</option>
+                        <option>Honda</option>
+                        <option>Infinity</option>
+                    </select>
+                    <select class="form-control" id="style-select">
+                        <option>All Body Styles</option>
+                        <option>Sedan</option>
+                        <option>Coupe</option>
+                        <option>Convertivable</option>
+                        <option>SUV</option>
+                        <option>Wagon</option>
+                    </select>
+                  </div>
+              </div> 
+        </div>
+        <script type="text/javascript">
+            $('.carousel').carousel()
+            $(function () 
+            {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script>
+    </body>
+</html>
