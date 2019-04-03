@@ -1,10 +1,16 @@
 import React, {Component} from 'react'
 import Nav from './nav'
+import Carousel from './carousal'
 
 class Home extends Component{
 
     render(){
-        return <Nav/>;
+        return (
+        <div>
+            <Nav/>
+            <Carousel/>
+        </div>
+        )
     }
   
 }
