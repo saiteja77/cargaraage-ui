@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import Nav from './nav'
 import Carousel from './carousal'
+import Footer from '../footer'
 
 class Home extends Component{
 
@@ -9,6 +10,7 @@ class Home extends Component{
         <div>
             <Nav/>
             <Carousel/>
+            <Footer/>
         </div>
         )
     }
