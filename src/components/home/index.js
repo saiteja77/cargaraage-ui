@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
-import Nav from './nav'
-import Carousel from './carousal'
-import Footer from '../footer'
+import Nav from './Nav'
+import Carousel from './Carousal'
+import Footer from '../Footer'
+import Body from './Body';
 
 class Home extends Component{
 
@@ -10,6 +11,7 @@ class Home extends Component{
         <div>
             <Nav/>
             <Carousel/>
+            <Body/>
             <Footer/>
         </div>
         )
