@@ -814,7 +814,7 @@
   dependencies:
     regenerator-runtime "^0.12.0"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.1":
   version "7.4.3"
   resolved "https://binrepo.target.com/artifactory/api/npm/npms/@babel/runtime/-/runtime-7.4.3.tgz#79888e452034223ad9609187a0ad1fe0d2ad4bdc"
   integrity sha1-eYiORSA0IjrZYJGHoK0f4NKtS9w=
@@ -871,6 +871,11 @@
   dependencies:
     "@date-io/core" "^0.0.2"
 
+"@emotion/hash@^0.7.1":
+  version "0.7.1"
+  resolved "https://binrepo.target.com/artifactory/api/npm/npms/@emotion/hash/-/hash-0.7.1.tgz#9833722341379fb7d67f06a4b00ab3c37913da53"
+  integrity sha1-mDNyI0E3n7fWfwaksAqzw3kT2lM=
+
 "@fortawesome/fontawesome-free@^5.7.1":
   version "5.8.1"
   resolved "https://binrepo.target.com/artifactory/api/npm/npms/@fortawesome/fontawesome-free/-/fontawesome-free-5.8.1.tgz#cbafbfe8894c4e3e3c3a9da6774e249ac1f2da8b"
@@ -916,6 +921,39 @@
   dependencies:
     "@babel/runtime" "^7.2.0"
     recompose "0.28.0 - 0.30.0"
+
+"@material-ui/lab@^3.0.0-alpha.30":
+  version "3.0.0-alpha.30"
+  resolved "https://binrepo.target.com/artifactory/api/npm/npms/@material-ui/lab/-/lab-3.0.0-alpha.30.tgz#c6c64d0ff2b28410a09e4009f3677499461f3df8"
+  integrity sha1-xsZND/KyhBCgnkAJ82d0mUYfPfg=
+  dependencies:
+    "@babel/runtime" "^7.2.0"
+    "@material-ui/utils" "^3.0.0-alpha.2"
+    classnames "^2.2.5"
+    keycode "^2.1.9"
+    prop-types "^15.6.0"
+
+"@material-ui/styles@^3.0.0-alpha.10":
+  version "3.0.0-alpha.10"
+  resolved "https://binrepo.target.com/artifactory/api/npm/npms/@material-ui/styles/-/styles-3.0.0-alpha.10.tgz#4c28a6d6dacb1fb71aff4642f92b63232a3f298d"
+  integrity sha1-TCim1trLH7ca/0ZC+StjIyo/KY0=
+  dependencies:
+    "@babel/runtime" "^7.2.0"
+    "@emotion/hash" "^0.7.1"
+    "@material-ui/utils" "^3.0.0-alpha.2"
+    classnames "^2.2.5"
+    deepmerge "^3.0.0"
+    hoist-non-react-statics "^3.2.1"
+    jss "^10.0.0-alpha.7"
+    jss-plugin-camel-case "^10.0.0-alpha.7"
+    jss-plugin-default-unit "^10.0.0-alpha.7"
+    jss-plugin-global "^10.0.0-alpha.7"
+    jss-plugin-nested "^10.0.0-alpha.7"
+    jss-plugin-props-sort "^10.0.0-alpha.7"
+    jss-plugin-rule-value-function "^10.0.0-alpha.7"
+    jss-plugin-vendor-prefixer "^10.0.0-alpha.7"
+    prop-types "^15.6.0"
+    warning "^4.0.1"
 
 "@material-ui/system@^3.0.0-alpha.0":
   version "3.0.0-alpha.2"
@@ -2942,6 +2980,14 @@ css-vendor@^0.3.8:
   resolved "https://binrepo.target.com/artifactory/api/npm/npms/css-vendor/-/css-vendor-0.3.8.tgz#6421cfd3034ce664fe7673972fd0119fc28941fa"
   integrity sha1-ZCHP0wNM5mT+dnOXL9ARn8KJQfo=
   dependencies:
+    is-in-browser "^1.0.2"
+
+css-vendor@^1.1.0:
+  version "1.2.1"
+  resolved "https://binrepo.target.com/artifactory/api/npm/npms/css-vendor/-/css-vendor-1.2.1.tgz#21b914913d3a68bab2708090dab2e61db7c9eaec"
+  integrity sha1-IbkUkT06aLqycICQ2rLmHbfJ6uw=
+  dependencies:
+    "@babel/runtime" "^7.3.1"
     is-in-browser "^1.0.2"
 
 css-what@2.1, css-what@^2.1.2:
@@ -6049,6 +6095,58 @@ jss-nested@^6.0.1:
   dependencies:
     warning "^3.0.0"
 
+jss-plugin-camel-case@^10.0.0-alpha.7:
+  version "10.0.0-alpha.7"
+  resolved "https://binrepo.target.com/artifactory/api/npm/npms/jss-plugin-camel-case/-/jss-plugin-camel-case-10.0.0-alpha.7.tgz#7dcbd9acb6682f3102cb2d3356b4fd9642d93f17"
+  integrity sha1-fcvZrLZoLzECyy0zVrT9lkLZPxc=
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    hyphenate-style-name "^1.0.2"
+
+jss-plugin-default-unit@^10.0.0-alpha.7:
+  version "10.0.0-alpha.7"
+  resolved "https://binrepo.target.com/artifactory/api/npm/npms/jss-plugin-default-unit/-/jss-plugin-default-unit-10.0.0-alpha.7.tgz#f6dd0a03d545e7bf243c062bae3a832ac8c5ff6d"
+  integrity sha1-9t0KA9VF578kPAYrrjqDKsjF/20=
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
+jss-plugin-global@^10.0.0-alpha.7:
+  version "10.0.0-alpha.7"
+  resolved "https://binrepo.target.com/artifactory/api/npm/npms/jss-plugin-global/-/jss-plugin-global-10.0.0-alpha.7.tgz#38ca390802b62da490afbaafc581552a81977729"
+  integrity sha1-OMo5CAK2LaSQr7qvxYFVKoGXdyk=
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
+jss-plugin-nested@^10.0.0-alpha.7:
+  version "10.0.0-alpha.7"
+  resolved "https://binrepo.target.com/artifactory/api/npm/npms/jss-plugin-nested/-/jss-plugin-nested-10.0.0-alpha.7.tgz#03a89c8f7c1d570a3d5f16dae3e61f7f2edb0316"
+  integrity sha1-A6icj3wdVwo9Xxba4+Yffy7bAxY=
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    tiny-warning "^1.0.2"
+
+jss-plugin-props-sort@^10.0.0-alpha.7:
+  version "10.0.0-alpha.7"
+  resolved "https://binrepo.target.com/artifactory/api/npm/npms/jss-plugin-props-sort/-/jss-plugin-props-sort-10.0.0-alpha.7.tgz#46f1809fcae0acc048d0047aa54a4b9b6973597d"
+  integrity sha1-RvGAn8rgrMBI0AR6pUpLm2lzWX0=
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
+jss-plugin-rule-value-function@^10.0.0-alpha.7:
+  version "10.0.0-alpha.7"
+  resolved "https://binrepo.target.com/artifactory/api/npm/npms/jss-plugin-rule-value-function/-/jss-plugin-rule-value-function-10.0.0-alpha.7.tgz#63df1078ac361dda67996e25291d90f7226ae59a"
+  integrity sha1-Y98QeKw2HdpnmW4lKR2Q9yJq5Zo=
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
+jss-plugin-vendor-prefixer@^10.0.0-alpha.7:
+  version "10.0.0-alpha.7"
+  resolved "https://binrepo.target.com/artifactory/api/npm/npms/jss-plugin-vendor-prefixer/-/jss-plugin-vendor-prefixer-10.0.0-alpha.7.tgz#caa34eb0bc39f0c98f425e174fc220d1f1a8760a"
+  integrity sha1-yqNOsLw58MmPQl4XT8Ig0fGodgo=
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    css-vendor "^1.1.0"
+
 jss-props-sort@^6.0.0:
   version "6.0.0"
   resolved "https://binrepo.target.com/artifactory/api/npm/npms/jss-props-sort/-/jss-props-sort-6.0.0.tgz#9105101a3b5071fab61e2d85ea74cc22e9b16323"
@@ -6060,6 +6158,15 @@ jss-vendor-prefixer@^7.0.0:
   integrity sha1-AWZyllABXvGdnwJDfHNmcjFgXHE=
   dependencies:
     css-vendor "^0.3.8"
+
+jss@^10.0.0-alpha.7:
+  version "10.0.0-alpha.16"
+  resolved "https://binrepo.target.com/artifactory/api/npm/npms/jss/-/jss-10.0.0-alpha.16.tgz#0555e8b667e08dbd2cc94f6125be5a8b8b022833"
+  integrity sha1-BVXotmfgjb0syU9hJb5ai4sCKDM=
+  dependencies:
+    "@babel/runtime" "^7.3.1"
+    is-in-browser "^1.1.3"
+    tiny-warning "^1.0.2"
 
 jss@^9.8.7:
   version "9.8.7"
@@ -6077,7 +6184,7 @@ jsx-ast-utils@^2.0.1:
   dependencies:
     array-includes "^3.0.3"
 
-keycode@^2.2.0:
+keycode@^2.1.9, keycode@^2.2.0:
   version "2.2.0"
   resolved "https://binrepo.target.com/artifactory/api/npm/npms/keycode/-/keycode-2.2.0.tgz#3d0af56dc7b8b8e5cba8d0a97f107204eec22b04"
   integrity sha1-PQr1bce4uOXLqNCpfxByBO7CKwQ=
@@ -8348,15 +8455,6 @@ react-app-polyfill@^0.2.2:
     raf "3.4.1"
     whatwg-fetch "3.0.0"
 
-react-bootstrap-carousel@^3.4.1:
-  version "3.4.1"
-  resolved "https://binrepo.target.com/artifactory/api/npm/npms/react-bootstrap-carousel/-/react-bootstrap-carousel-3.4.1.tgz#d450eee98b017a25c8a1857fda6c00568673bc62"
-  integrity sha1-1FDu6YsBeiXIoYV/2mwAVoZzvGI=
-  dependencies:
-    classnames "^2.2.6"
-    react "^16.6.1"
-    react-dom "^16.6.1"
-
 react-chartjs-2@^2.7.0:
   version "2.7.6"
   resolved "https://binrepo.target.com/artifactory/api/npm/npms/react-chartjs-2/-/react-chartjs-2-2.7.6.tgz#b8cd29bed00bf55b9e8172b06466b4ecf2b86bfb"
@@ -8396,7 +8494,7 @@ react-dev-utils@^8.0.0:
     strip-ansi "5.0.0"
     text-table "0.2.0"
 
-react-dom@^16.6.1, react-dom@^16.8.6:
+react-dom@^16.8.6:
   version "16.8.6"
   resolved "https://binrepo.target.com/artifactory/api/npm/npms/react-dom/-/react-dom-16.8.6.tgz#71d6303f631e8b0097f56165ef608f051ff6e10f"
   integrity sha1-cdYwP2MeiwCX9WFl72CPBR/24Q8=
@@ -8405,13 +8503,6 @@ react-dom@^16.6.1, react-dom@^16.8.6:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
     scheduler "^0.13.6"
-
-react-easy-swipe@^0.0.16:
-  version "0.0.16"
-  resolved "https://binrepo.target.com/artifactory/api/npm/npms/react-easy-swipe/-/react-easy-swipe-0.0.16.tgz#5a3d949a8f975d05be92a818254315d1318a81ea"
-  integrity sha1-Wj2Umo+XXQW+kqgYJUMV0TGKgeo=
-  dependencies:
-    prop-types "^15.5.8"
 
 react-error-overlay@^5.1.4:
   version "5.1.4"
@@ -8476,15 +8567,6 @@ react-popper@^1.3.3:
     prop-types "^15.6.1"
     typed-styles "^0.0.7"
     warning "^4.0.2"
-
-react-responsive-carousel@^3.1.47:
-  version "3.1.47"
-  resolved "https://binrepo.target.com/artifactory/api/npm/npms/react-responsive-carousel/-/react-responsive-carousel-3.1.47.tgz#0d1442284e2c45854d81bc2f0c24d0f838d274b6"
-  integrity sha1-DRRCKE4sRYVNgbwvDCTQ+DjSdLY=
-  dependencies:
-    classnames "^2.2.5"
-    prop-types "^15.5.8"
-    react-easy-swipe "^0.0.16"
 
 react-router-dom@^4.3.1:
   version "4.3.1"
@@ -8599,7 +8681,7 @@ react-transition-group@^2.2.1, react-transition-group@^2.5.0:
     prop-types "^15.6.2"
     react-lifecycles-compat "^3.0.4"
 
-react@^16.6.1, react@^16.8.6:
+react@^16.8.6:
   version "16.8.6"
   resolved "https://binrepo.target.com/artifactory/api/npm/npms/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
   integrity sha1-rWw6lhT9Ok6e9REX9U2IjaAfK74=
@@ -9838,7 +9920,7 @@ tiny-invariant@^1.0.2:
   resolved "https://binrepo.target.com/artifactory/api/npm/npms/tiny-invariant/-/tiny-invariant-1.0.4.tgz#346b5415fd93cb696b0c4e8a96697ff590f92463"
   integrity sha1-NGtUFf2Ty2lrDE6Klml/9ZD5JGM=
 
-tiny-warning@^1.0.0:
+tiny-warning@^1.0.0, tiny-warning@^1.0.2:
   version "1.0.2"
   resolved "https://binrepo.target.com/artifactory/api/npm/npms/tiny-warning/-/tiny-warning-1.0.2.tgz#1dfae771ee1a04396bdfde27a3adcebc6b648b28"
   integrity sha1-Hfrnce4aBDlr394no63OvGtkiyg=
