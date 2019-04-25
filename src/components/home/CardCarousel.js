@@ -24,8 +24,8 @@ class BodyCarousel extends React.Component{
   }
     return(
       <MDBContainer className="mt-5">
-        <MDBRow>
-          <MDBCol md="4">
+        <MDBRow style={{margin:"auto"}}>
+          <MDBCol md="4" >
             <Card cardInfo = {properties.card1}/>
           </MDBCol>
           <MDBCol md="4">

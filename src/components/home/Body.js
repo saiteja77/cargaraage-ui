@@ -1,11 +1,15 @@
 import React, {Component} from 'react';
 import BodyCarousel from './CardCarousel';
+import Panel from './HomePanel';
 
 class Body extends Component{
 
     render(){
         return(
-            <BodyCarousel/>
+            <div>
+                <Panel/>
+                <BodyCarousel/>
+            </div>
         );
     }
 }

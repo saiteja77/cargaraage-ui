@@ -23,7 +23,7 @@ class MediaCard extends React.Component{
   render(){
     const {classes} = this.props
     return (
-      <Card className={[classes.card, "shadow-box-example z-depth-1-half"].join(" ")}>
+      <Card className={[classes.card, "hoverable"].join(" ")}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -40,10 +40,10 @@ class MediaCard extends React.Component{
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button size="small" style={{color: "#752205"}}>
           Share
         </Button>
-        <Button size="small" color="primary">
+        <Button size="small" style={{color: "#752205"}}>
           Learn More
         </Button>
       </CardActions>
