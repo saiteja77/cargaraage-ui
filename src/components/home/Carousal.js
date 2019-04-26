@@ -3,7 +3,7 @@ import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView } from 'mdbreac
 
 const Carousel = () => {
   return (
-    <MDBCarousel activeItem={1} length={3} showControls={true} showIndicators={true } className="z-depth-1">
+    <MDBCarousel activeItem={1} length={3} showControls={false} showIndicators={false } className="z-depth-1" style={{zIndex: "-999"}}>
       <MDBCarouselInner>
         <MDBCarouselItem itemId="1">
           <MDBView>

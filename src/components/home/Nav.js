@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import { withStyles } from '@material-ui/core/styles';
@@ -118,12 +117,9 @@ class PrimarySearchAppBar extends React.Component {
 
     return (
       <div className={classes.root}>
-        <AppBar position="static" style={{ background: '#752205' }}>
+        <AppBar position="fixed" style={{ background: '#752205', zIndex:'3'}}>
           <Toolbar>
-            <Typography className={classes.title} variant="h5" color="inherit" noWrap>
-              CarGaraage
-            </Typography>
-            
+            <img src="https://raw.githubusercontent.com/saiteja77/CarGaraage/master/images/CarGaraageLogo.png" alt="CarGaraage" style={{width:"auto", height:"70.3px", marginBottom:"-2rem", marginLeft:"100px"}}/>
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
               
@@ -153,6 +149,9 @@ class PrimarySearchAppBar extends React.Component {
               </IconButton>
             </div>
           </Toolbar>
+        </AppBar>
+        <AppBar position="fixed" style={{marginTop: "60px", background:"#363636", zIndex:"2", height: "2rem"}}>
+          <Toolbar></Toolbar>
         </AppBar>
         {renderMenu}
         {renderMobileMenu}
