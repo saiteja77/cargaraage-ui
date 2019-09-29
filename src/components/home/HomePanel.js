@@ -4,7 +4,9 @@ import SelectInputField from './SelectInputField'
 import Modal from './AdvancedSearchModal'
 import Link from '@material-ui/core/Link';
 import Button from '@material-ui/core/Button';
-import Axios from 'axios';
+import { connect } from 'react-redux'
+import { getMakes } from '../../actions/makesAction'
+import { getBodyStyles } from '../../actions/bodyStylesAction'
 
 class Panel extends React.Component {
 
@@ -25,20 +27,16 @@ class Panel extends React.Component {
         }
     }
 
-    componentDidMount(){
-        Axios.get('https://car-garaage-api.herokuapp.com/makes/').then(response=>{
-            this.setState({allMakes: response.data})
-        })
-        Axios.get('https://car-garaage-api.herokuapp.com/bodyStyles/').then(response=>{
-            this.setState({bodyStyles: response.data})
-        })
+    componentWillMount(){
+        this.props.getMakes()
+        this.props.getBodyStyles()
     }
     
     render() {
 
         return (
             <Fragment>
-                {this.state.allMakes.length !== 0 && this.state.bodyStyles.length !== 0 &&
+                {this.props.makes.length !==0 && this.props.bodyStyles.length !==0 &&
                     <MDBContainer style={{ marginTop: "-1rem", zIndex: "1" }}>
                     <MDBCard style={{ width: "80%", marginTop: "1rem", margin: "auto" }}>
                         <MDBCardHeader style={{ background: "#752205", color: "white" }}>
@@ -47,8 +45,8 @@ class Panel extends React.Component {
                         <MDBCardBody>
                             <MDBCardTitle>Search By</MDBCardTitle>
                             <MDBCardText>
-                                <SelectInputField optionValue={this.state.allMakes} label="Make"></SelectInputField>
-                                <SelectInputField optionValue={this.state.bodyStyles} label="Body Style"></SelectInputField>
+                                <SelectInputField optionValue={this.props.makes} label="Make"></SelectInputField>
+                                <SelectInputField optionValue={this.props.bodyStyles} label="Body Style"></SelectInputField>
                                 <Button style={{backgroundColor:'rgb(117, 34, 5)', color: '#fff', marginTop:'10px', marginLeft:'5px'}}>Search</Button>
                             </MDBCardText>
                             <Link
@@ -69,5 +67,9 @@ class Panel extends React.Component {
     }
 }
 
+const mapStateToProps = state => ({
+    makes: state.props.makes,
+    bodyStyles: state.props.bodyStyles
+})
 
-export default Panel;
+export default connect(mapStateToProps, { getMakes, getBodyStyles }) (Panel);

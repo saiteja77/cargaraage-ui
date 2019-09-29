@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import Nav from './Nav'
+import Nav from '../Layout/Nav'
 import Carousel from './Carousal'
-import Footer from '../Footer'
+import Footer from '../Layout/Footer'
 import Body from './Body';
 
 class Home extends Component{
