@@ -1,2 +1,4 @@
 export const MAKES = 'MAKES'
 export const BODY_STYLES = 'BODY_STYLES'
+export const MAKE_SELECTED = 'MAKE_SELECTED'
+export const BODY_STYLE_SELECTED = 'BODY_STYLE_SELECTED'

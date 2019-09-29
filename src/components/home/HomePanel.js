@@ -5,8 +5,7 @@ import Modal from './AdvancedSearchModal'
 import Link from '@material-ui/core/Link';
 import Button from '@material-ui/core/Button';
 import { connect } from 'react-redux'
-import { getMakes } from '../../actions/makesAction'
-import { getBodyStyles } from '../../actions/bodyStylesAction'
+import { getMakes, getBodyStyles } from '../../actions'
 
 class Panel extends React.Component {
 
@@ -25,6 +24,16 @@ class Panel extends React.Component {
         else {
             this.setState({ open: false })
         }
+    }
+
+    buttonClicked = (e) => {
+        e.preventDefault()
+        if(this.props.selectedMake === '' && this.props.selectedBodyStyle === ''){
+            alert('Please select either of Makes or BodyStyles')
+        } else{
+
+        }
+        console.log('SelectedMake: ' + this.props.selectedMake + '\nSelected BodyStyle: ' + this.props.selectedBodyStyle)
     }
 
     componentWillMount(){
@@ -47,7 +56,7 @@ class Panel extends React.Component {
                             <MDBCardText>
                                 <SelectInputField optionValue={this.props.makes} label="Make"></SelectInputField>
                                 <SelectInputField optionValue={this.props.bodyStyles} label="Body Style"></SelectInputField>
-                                <Button style={{backgroundColor:'rgb(117, 34, 5)', color: '#fff', marginTop:'10px', marginLeft:'5px'}}>Search</Button>
+                                <Button onClick={this.buttonClicked} style={{backgroundColor:'rgb(117, 34, 5)', color: '#fff', marginTop:'10px', marginLeft:'5px'}}>Search</Button>
                             </MDBCardText>
                             <Link
                                 component="button"
@@ -69,7 +78,9 @@ class Panel extends React.Component {
 
 const mapStateToProps = state => ({
     makes: state.props.makes,
-    bodyStyles: state.props.bodyStyles
+    bodyStyles: state.props.bodyStyles,
+    selectedMake: state.selection.selectedMake,
+    selectedBodyStyle: state.selection.selectedBodyStyle
 })
 
 export default connect(mapStateToProps, { getMakes, getBodyStyles }) (Panel);

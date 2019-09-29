@@ -1,6 +1,8 @@
 import React from 'react'
 import MenuItem from '@material-ui/core/MenuItem';
 import { Select, InputLabel } from '@material-ui/core';
+import { connect } from 'react-redux'
+import { setSelected } from '../../actions';
 
 class SelectInputField extends React.Component {
 
@@ -12,7 +14,7 @@ class SelectInputField extends React.Component {
             label: ''
         }
     }
-    componentDidMount() {
+    componentWillMount() {
         this.getValues();
     }
     getValues() {
@@ -21,6 +23,11 @@ class SelectInputField extends React.Component {
     handleChange = (e) => {
         e.preventDefault()
         this.setState({ value: e.target.value })
+        var value ={
+            type: this.state.label,
+            value: e.target.value
+        }
+        this.props.setSelected(value)
     }
     render() {
         const ITEM_HEIGHT = 48;
@@ -62,5 +69,9 @@ class SelectInputField extends React.Component {
 
 }
 
+const mapStateToProps = state => ({
+    makes: state.props.makes,
+    bodyStyles: state.props.bodyStyles
+})
 
-export default SelectInputField
+export default connect(mapStateToProps, { setSelected }) (SelectInputField)
