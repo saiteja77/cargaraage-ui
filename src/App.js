@@ -1,14 +1,14 @@
 import React from 'react'
-import Home from './components/home';
 import { Provider } from 'react-redux'
 import store from './stores'
+import Routes from './routes';
 
 export default class extends React.Component{
     
   render(){
     return (
         <Provider store = {store}>
-            <Home/>
+          <Routes/>
         </Provider>
     )
   }

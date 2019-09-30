@@ -9,6 +9,7 @@ import { withStyles } from '@material-ui/core/styles';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import ToolTip from '@material-ui/core/Tooltip'
+import { Link } from 'react-router-dom'
 
 const styles = theme => ({
   root: {
@@ -80,6 +81,7 @@ class PrimarySearchAppBar extends React.Component {
       >
         <MenuItem onClick={this.handleMenuClose}>Profile</MenuItem>
         <MenuItem onClick={this.handleMenuClose}>My account</MenuItem>
+        <Link to='/admin'><MenuItem onClick={this.handleMenuClose}>Admin</MenuItem></Link>
       </Menu>
     );
 
@@ -91,11 +93,13 @@ class PrimarySearchAppBar extends React.Component {
         open={isMobileMenuOpen}
         onClose={this.handleMenuClose}
       >
-        <MenuItem onClick={this.handleMobileMenuClose}>
-          <IconButton color="inherit" style={{ fontSize: '15px' }}>
-            <p>HOME</p>
-          </IconButton>
-        </MenuItem>
+        <Link to='/'>
+          <MenuItem onClick={this.handleMobileMenuClose}>
+            <IconButton color="inherit" style={{ fontSize: '15px' }}>
+              <p>HOME</p>
+            </IconButton>
+          </MenuItem>
+        </Link>
         <MenuItem onClick={this.handleMobileMenuClose}>
           <IconButton color="inherit"  style={{ fontSize: '15px' }}>
             <p>NEWS</p>
@@ -123,9 +127,11 @@ class PrimarySearchAppBar extends React.Component {
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
               
-              <IconButton color= "inherit" style={{ fontSize: '15px' }}>
+              <Link to='/'>
+                <IconButton color= "inherit" style={{ fontSize: '15px' }}>
                 HOME
-              </IconButton>
+                </IconButton>
+              </Link>
               <IconButton color="inherit" style={{ fontSize: '15px' }}>
                 NEWS
               </IconButton>
