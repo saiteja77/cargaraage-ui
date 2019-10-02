@@ -18,7 +18,7 @@ class SelectInputField extends React.Component {
         this.getValues();
     }
     getValues() {
-        this.setState({ optionValue: this.props.optionValue, label: this.props.label, value: 'All' })
+        this.setState({ optionValue: this.props.optionValue, label: this.props.label, value: this.props.optionValue[0].value })
     }
     handleChange = (e) => {
         e.preventDefault()
@@ -46,8 +46,6 @@ class SelectInputField extends React.Component {
                     {this.state.label}
                 </InputLabel>
                 <Select
-                    multiline
-                    displayEmpty
                     name="age"
                     style={{ color: "#752205",
                 width: '10rem', display:"flex"}}
