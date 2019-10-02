@@ -1,7 +1,7 @@
 import { BODY_STYLES, MAKES, MAKE_SELECTED, BODY_STYLE_SELECTED } from "./types";
 
 export const getBodyStyles = () => dispatch => {
-    fetch('https://car-garaage-api.herokuapp.com/bodyStyles/')
+    fetch('https://cargaraage-api.herokuapp.com/bodyStyles/')
     .then(response => response.json())
     .then(data => 
         dispatch({
@@ -12,7 +12,7 @@ export const getBodyStyles = () => dispatch => {
 }
 
 export const getMakes = () => dispatch => {
-    fetch('https://car-garaage-api.herokuapp.com/makes/')
+    fetch('https://cargaraage-api.herokuapp.com/makes/')
     .then(response => response.json())
     .then(data => 
         dispatch({
