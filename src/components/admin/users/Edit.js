@@ -1,17 +1,17 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import Nav from '../../Layout/Nav';
 import SideBar from '../Sidebar';
-import { Typography } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
+import Table from './Table';
 
 export default function EditUsers(){
     return (
-        <Fragment>
+        <div style={{backgroundColor:'#404040', minHeight:'100vh'}}>
             <Nav/>
             <SideBar/>
-            <Container maxWidth="lg" style={{marginTop:'110px', marginLeft:'250px'}}>
-                <Typography>Edit Users</Typography>
+            <Container maxWidth="lg" style={{marginTop:'20vh', marginLeft:'250px', paddingBottom:'14vh'}}>
+                <Table url='API_URL'/>
             </Container>
-        </Fragment>
+        </div>
     )
 }
