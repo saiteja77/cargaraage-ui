@@ -1,4 +1,5 @@
-import { BODY_STYLES, MAKES, MAKE_SELECTED, BODY_STYLE_SELECTED } from "./types";
+import { BODY_STYLES, MAKES, MAKE_SELECTED, BODY_STYLE_SELECTED, USERS_CMS, DELETE_USER, TOGGLE_USER, USER_TO_BE_SAVED } from "./types";
+import Axios from "axios";
 
 export const getBodyStyles = () => dispatch => {
     fetch('https://cargaraage-api.herokuapp.com/bodyStyles/')
@@ -35,3 +36,35 @@ export const setSelected = props => dispatch => {
         })
     } 
 }
+
+export const setUsersCms = props => dispatch => {
+        dispatch({
+            type: USERS_CMS,
+            payload: props
+        })
+}
+
+export const deleteUser = index => dispatch => {
+    Axios.delete('https://cargaraage-api.herokuapp.com/users' + index.id )
+    .then(response => console.log)
+    .catch(error => console.log)
+    dispatch({
+        type: DELETE_USER,
+        payload: index
+    })
+}
+
+export const userTobeSaved = props => dispatch => {
+    dispatch({
+        type: USER_TO_BE_SAVED,
+        payload: props
+    })
+}
+
+export const toggleEditUser = props => dispatch => {
+    dispatch({
+        type: TOGGLE_USER,
+        payload: props
+    })
+}
+
