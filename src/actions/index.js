@@ -2,7 +2,7 @@ import { BODY_STYLES, MAKES, MAKE_SELECTED, BODY_STYLE_SELECTED, USERS_CMS, DELE
 import Axios from "axios";
 
 export const getBodyStyles = () => dispatch => {
-    fetch('https://cargaraage-api.herokuapp.com/bodyStyles/')
+    fetch('http://ec2-18-218-233-7.us-east-2.compute.amazonaws.com/bodyStyles/')
     .then(response => response.json())
     .then(data => 
         dispatch({
@@ -13,7 +13,7 @@ export const getBodyStyles = () => dispatch => {
 }
 
 export const getMakes = () => dispatch => {
-    fetch('https://cargaraage-api.herokuapp.com/makes/')
+    fetch('http://ec2-18-218-233-7.us-east-2.compute.amazonaws.com/makes/')
     .then(response => response.json())
     .then(data => 
         dispatch({
@@ -45,7 +45,7 @@ export const setUsersCms = props => dispatch => {
 }
 
 export const deleteUser = index => dispatch => {
-    Axios.delete('https://cargaraage-api.herokuapp.com/users' + index.id )
+    Axios.delete('http://ec2-18-218-233-7.us-east-2.compute.amazonaws.com/users' + index.id )
     .then(response => console.log)
     .catch(error => console.log)
     dispatch({

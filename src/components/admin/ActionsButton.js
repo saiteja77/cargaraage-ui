@@ -51,6 +51,19 @@ export default function ActionsButton(props) {
     setAnchorEl(null);
   };
 
+  function getIcon(text){
+    switch (text) {
+      case 'Edit':
+        return <EditRoundedIcon/>
+      case 'Add':
+        return <AddBoxRoundedIcon/>
+      case 'Delete':
+        return <DeleteForeverRoundedIcon/>
+      default:
+        break;
+    }
+  }
+
   return (
     <Fragment>
       <Typography
@@ -70,9 +83,7 @@ export default function ActionsButton(props) {
         <Link key={index} to={props.link + '/' + text.toLowerCase()}>
             <StyledMenuItem>
                 <ListItemIcon style={{color:'rgb(173, 173, 173)'}}>
-                    {text === 'Edit' && <EditRoundedIcon/>}
-                    {text === 'Add' && <AddBoxRoundedIcon/>}
-                    {text === 'Delete' && <DeleteForeverRoundedIcon/>}
+                  {getIcon(text)}
                 </ListItemIcon>
                 <Typography style={{color:'rgb(173, 173, 173)'}}>{text + ' ' + props.item}</Typography>
             </StyledMenuItem>
