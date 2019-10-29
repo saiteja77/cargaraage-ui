@@ -9,6 +9,7 @@ import EditBodyStyles from '../components/admin/bodystyles/Edit';
 import AddBodyStyles from '../components/admin/bodystyles/Add';
 import DeleteBodyStyles from '../components/admin/bodystyles/Delete';
 import Page404 from '../errorcomponents/Page404';
+import AddCars from '../components/admin/cars/Add';
 
 export default function Routes(){
     return(
@@ -22,6 +23,7 @@ export default function Routes(){
                 <Route exact path = '/bodystyles/edit'><EditBodyStyles/></Route>
                 <Route exact path = '/bodystyles/add'><AddBodyStyles/></Route>
                 <Route exact path = '/bodystyles/delete'><DeleteBodyStyles/></Route>
+                <Route exact path = '/cars/add'><AddCars/></Route>
                 <Route exact path='*'><Page404/></Route>
             </Switch>
         </BrowserRouter>
