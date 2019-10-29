@@ -1,16 +1,16 @@
 import React, { Fragment } from 'react'
 import Nav from '../../Layout/Nav';
 import SideBar from '../Sidebar';
-import { Typography } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
+import AddCar from './add/AddCar';
 
-export default function AddUsers(){
+export default function AddCars(){
     return (
         <Fragment>
             <Nav/>
             <SideBar/>
             <Container maxWidth="lg" style={{marginTop:'110px', marginLeft:'250px'}}>
-                <Typography>Add Users</Typography>
+                <AddCar/>
             </Container>
         </Fragment>
     )
