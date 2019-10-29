@@ -135,7 +135,7 @@ function CustomTable(props) {
     }
   }
   function getUsers(){
-    fetch('http://ec2-18-218-233-7.us-east-2.compute.amazonaws.com/users').then(response => response.json())
+    fetch('https://cargaraage-api.herokuapp.com/users').then(response => response.json())
     .then(data => 
       props.setUsersCms(data)
     )
