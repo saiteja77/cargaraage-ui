@@ -26,7 +26,7 @@ export default function Specifications(props) {
       }, [])
     
     function getBodyStyles(){
-        Axios.get('http://ec2-18-218-233-7.us-east-2.compute.amazonaws.com/bodyStyles/')
+        Axios.get('https://cargaraage-api.herokuapp.com/bodyStyles/')
         .then(response => {
             setBodyStyles(response.data)
         }).catch(error => {
@@ -35,7 +35,7 @@ export default function Specifications(props) {
     }
     
     function getMakes(){
-        Axios.get('http://ec2-18-218-233-7.us-east-2.compute.amazonaws.com/makes/')
+        Axios.get('https://cargaraage-api.herokuapp.com/makes/')
         .then(response => {
             setMakes(response.data)
         }).catch(error => {

@@ -100,7 +100,7 @@ export default function AddCar(props) {
   }
   const handleClick = event => {
     let payload = data
-    Axios.post('http://ec2-18-218-233-7.us-east-2.compute.amazonaws.com/cars', payload).then(response => {
+    Axios.post('https://cargaraage-api.herokuapp.com/cars', payload).then(response => {
       console.log(response)
     }).catch(error=>{
       console.log(error.response)
