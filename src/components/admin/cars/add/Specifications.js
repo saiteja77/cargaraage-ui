@@ -19,6 +19,10 @@ export default function Specifications(props) {
     const [mileage, setMileage] = React.useState({});
     const [makes, setMakes] = React.useState([])
     const [bodyStyles, setBodyStyles] = React.useState([])
+    const [interiorColor, setInteriorColor] = React.useState('')
+    const [exteriorColor, setExteriorColor] = React.useState('')
+    const [transmission, setTransmission] = React.useState('')
+    const [driveterrain, setDriveterrain] = React.useState('')
 
     React.useEffect(() => {
         getBodyStyles()
@@ -26,7 +30,7 @@ export default function Specifications(props) {
       }, [])
     
     function getBodyStyles(){
-        Axios.get('https://cargaraage-api.herokuapp.com/bodyStyles/')
+        Axios.get('https://saiteja.dev/cars-api/bodyStyles/')
         .then(response => {
             setBodyStyles(response.data)
         }).catch(error => {
@@ -35,7 +39,7 @@ export default function Specifications(props) {
     }
     
     function getMakes(){
-        Axios.get('https://cargaraage-api.herokuapp.com/makes/')
+        Axios.get('https://saiteja.dev/cars-api/makes/')
         .then(response => {
             setMakes(response.data)
         }).catch(error => {
@@ -55,7 +59,11 @@ export default function Specifications(props) {
             horsePower: parseInt(horsePower, 10),
             torque: parseInt(torque, 10),
             engineType: engineType,
-            year: parseInt(year, 10)
+            year: parseInt(year, 10),
+            interiorColor: interiorColor,
+            exteriorColor: exteriorColor,
+            transmission: transmission,
+            driveterrain: driveterrain
         });
     }, [
             bodyStyle,
@@ -68,7 +76,11 @@ export default function Specifications(props) {
             horsePower,
             torque,
             engineType,
-            year
+            year,
+            interiorColor,
+            exteriorColor,
+            transmission,
+            driveterrain
         ]);
 
     React.useEffect(() => {
@@ -101,6 +113,19 @@ export default function Specifications(props) {
                 break;
             case "year":
                 setYear(event.target.value);
+                break;
+
+            case "interiorColor":
+                setInteriorColor(event.target.value);
+                break;
+            case "exteriorColor":
+                setExteriorColor(event.target.value);
+                break;
+            case "transmission":
+                setTransmission(event.target.value);
+                break;
+            case "driveterrain":
+                setDriveterrain(event.target.value);
                 break;
             default:
                 break;
@@ -213,6 +238,42 @@ export default function Specifications(props) {
                 margin="normal"
                 name="year"
                 value={year}
+                onChange={handleChange}
+            />
+            <TextField
+                label="Interior Color"
+                id="standard-uncontrolled"
+                placeholder={"Enter the interiorColor..."}
+                margin="normal"
+                name="interiorColor"
+                value={interiorColor}
+                onChange={handleChange}
+            />
+            <TextField
+                label="Exterior Color"
+                id="standard-uncontrolled"
+                placeholder={"Enter the exteriorColor..."}
+                margin="normal"
+                name="exteriorColor"
+                value={exteriorColor}
+                onChange={handleChange}
+            />
+            <TextField
+                label="Transmission"
+                id="standard-uncontrolled"
+                placeholder={"Enter transmission..."}
+                margin="normal"
+                name="transmission"
+                value={transmission}
+                onChange={handleChange}
+            />
+            <TextField
+                label="Driveterrain"
+                id="standard-uncontrolled"
+                placeholder={"Enter the driveterrain..."}
+                margin="normal"
+                name="driveterrain"
+                value={driveterrain}
                 onChange={handleChange}
             />
         </div>
