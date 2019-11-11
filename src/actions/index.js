@@ -1,8 +1,9 @@
-import { BODY_STYLES, MAKES, MAKE_SELECTED, BODY_STYLE_SELECTED, USERS_CMS, DELETE_USER, TOGGLE_USER, USER_TO_BE_SAVED } from "./types";
-import Axios from "axios";
+import { BODY_STYLES, MAKES, MAKE_SELECTED, BODY_STYLE_SELECTED, USERS_CMS, DELETE_USER, TOGGLE_USER, USER_TO_BE_SAVED, LOGIN, CART } from "./types";
+import Axios from "axios"
+import jwt from 'jwt-decode'
 
 export const getBodyStyles = () => dispatch => {
-    fetch('https://cargaraage-api.herokuapp.com/bodyStyles/')
+    fetch('https://saiteja.dev/cars-api/bodyStyles/')
     .then(response => response.json())
     .then(data => 
         dispatch({
@@ -13,7 +14,7 @@ export const getBodyStyles = () => dispatch => {
 }
 
 export const getMakes = () => dispatch => {
-    fetch('https://cargaraage-api.herokuapp.com/makes/')
+    fetch('https://saiteja.dev/cars-api/makes/')
     .then(response => response.json())
     .then(data => 
         dispatch({
@@ -45,7 +46,7 @@ export const setUsersCms = props => dispatch => {
 }
 
 export const deleteUser = index => dispatch => {
-    Axios.delete('https://cargaraage-api.herokuapp.com/users' + index.id )
+    Axios.delete('https://saiteja.dev/cars-api/users' + index.id )
     .then(response => console.log)
     .catch(error => console.log)
     dispatch({
@@ -68,3 +69,24 @@ export const toggleEditUser = props => dispatch => {
     })
 }
 
+export const saveUserToken = () => dispatch => {
+    if(localStorage.getItem("cg-tk")){
+        const decodedToken = jwt(localStorage.getItem("cg-tk"))
+        dispatch({
+            type: LOGIN,
+            payload: decodedToken
+        })
+    } else {
+        dispatch({
+            type: LOGIN,
+            payload: {}
+        })
+    }
+}
+
+export const addToCart = props => dispatch => {
+    dispatch({
+        type: CART,
+        payload: props
+    })
+}
